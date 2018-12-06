@@ -1,4 +1,5 @@
 ## DartLearn
+[![Build Status](https://travis-ci.com/guildenstern70/DartLearn.svg?branch=master)](https://travis-ci.com/guildenstern70/DartLearn)
 
 Samples of coding in Dart.
 
