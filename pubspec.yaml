@@ -1,0 +1,14 @@
+name: DartLearn
+description: Samples of coding in Dart.
+version: 0.0.1
+# homepage: https://www.example.com
+author: guildenstern70 <alessiosaltarin@gmail.com>
+
+environment:
+  sdk: '>=2.1.0 <3.0.0'
+
+#dependencies:
+#  path: ^1.4.1
+
+dev_dependencies:
+  test: ^1.0.0
