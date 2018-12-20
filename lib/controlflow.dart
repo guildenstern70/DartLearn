@@ -6,27 +6,21 @@
  * for full license information.
  */
 
-
 var year = 1994;
 
 int ifThenElse() {
-
   var century = -1;
 
   if (year >= 2001) {
     century = 21;
   } else if (year >= 1901) {
-      century = 20;
+    century = 20;
   }
 
   return century;
-
 }
 
-
-int loops()
-{
-
+int loops() {
   var sum = 0;
   var year = 2000;
   var someNumbers = [34, 243, 21, 12, -32];
@@ -46,8 +40,4 @@ int loops()
   }
 
   return sum + year;
-
 }
-
-
-

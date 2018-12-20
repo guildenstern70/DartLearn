@@ -19,7 +19,6 @@ void main() {
     expect(alessio.fullname, 'Alessio Saltarin');
     expect(alessio.age, 10);
     expect(laura.age, 47);
-
   });
 
   test('controlflow', () {
@@ -28,7 +27,6 @@ void main() {
 
     expect(ifSum, 20);
     expect(forSum, 2372);
-
   });
 
   test('functions', () {
@@ -37,6 +35,5 @@ void main() {
 
     expect(fibo20, 6765);
     expect(fibo30, 832040);
-
   });
 }
