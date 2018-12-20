@@ -1,3 +1,11 @@
+/*
+ * Dart Learn - Copyright (c) Alessio Saltarin.
+ * All rights reserved.
+ *
+ * Licensed under the MIT License. See LICENSE file in the project root
+ * for full license information.
+ */
+
 ///
 /// Person class
 ///
@@ -18,9 +26,7 @@ class Person {
 
   // Getters and setters
   String get name => _name;
-
   String get surname => _surname;
-
   String get fullname => _name + ' ' + _surname;
 
   num get age => _age;
