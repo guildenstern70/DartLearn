@@ -6,7 +6,12 @@
  * for full license information.
  */
 
-void main(List<String> arguments) {
-  print('DartLearn version: 0.0.1');
-  print('Please run tests to see output.');
+
+/// Normal syntax
+int fibonacci(int n) {
+  if (n == 0 || n == 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
 }
+
+/// Shorthand syntax
+int shortFibonacci(int n) => fibonacci(n);
