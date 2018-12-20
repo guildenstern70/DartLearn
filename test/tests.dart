@@ -9,9 +9,11 @@
 import 'package:DartLearn/classes.dart';
 import 'package:DartLearn/controlflow.dart';
 import 'package:DartLearn/functions.dart';
+import 'package:DartLearn/collections.dart';
 import 'package:test/test.dart';
 
 void main() {
+
   test('classes', () {
     var alessio = Person.ageOfTen('Alessio', 'Saltarin');
     var laura = Person('Laura', 'Saltarin', 47);
@@ -36,4 +38,10 @@ void main() {
     expect(fibo20, 6765);
     expect(fibo30, 832040);
   });
+
+  test('collections', () {
+    expect(iterateList(), 6);
+    expect(iterateGases(), 30);
+  });
+
 }
