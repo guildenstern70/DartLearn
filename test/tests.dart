@@ -10,6 +10,7 @@ import 'package:DartLearn/classes.dart';
 import 'package:DartLearn/controlflow.dart';
 import 'package:DartLearn/functions.dart';
 import 'package:DartLearn/collections.dart';
+import 'package:DartLearn/nullaware.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -42,6 +43,11 @@ void main() {
   test('collections', () {
     expect(iterateList(), 6);
     expect(iterateGases(), 30);
+  });
+
+  test('null-aware', () {
+    expect(doThatIfNotNull(), 'something');
+    expect(returnThatIfThisIsNull(), 'something');
   });
 
 }
