@@ -12,21 +12,23 @@
 
 String doThatIfNotNull()
 {
-  String a = null;
-  var b = "something";
+  const String a = null;
+  const b = 'something';
 
-  var thisIsNull = a?.toString();
-  var thisIsSomething = b?.toString();
+  final thisIsNull = a?.toString();
+  final thisIsSomething = b?.toString();
 
-  if (thisIsNull == null)
-    return thisIsSomething; // it will return "something"
+  if (thisIsNull == null) {
+    return thisIsSomething;
+  } // it will return "something"
 
   return null;
 }
 
+/// Return something if null
 String returnThatIfThisIsNull() {
-  String a = null;
-  var b = "something";
+  String a;
+  const b = 'something';
 
   return a ?? b; // it will return "something"
 }

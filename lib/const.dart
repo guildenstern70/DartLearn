@@ -6,9 +6,16 @@
  * for full license information.
  */
 
-///
-/// Constants
-///
+
+/*
+  Constants
+ */
+
+/// Radar latitude
 const double radarLatitude = 40.7834390; //primitive double
+
+/// Radar longitude
 const double radarLongitude = -73.9773670; //primitive double
+
+/// Radar modes
 const List<String> radarModes = ['slow', 'medium', 'fast']; //const object

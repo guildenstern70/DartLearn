@@ -6,11 +6,19 @@
  * for full license information.
  */
 
-///
-/// Basic Types
-///
-var number = 10;
-var aSimpleString = "Simple String";
-var hex = 0xDEADBEEF;
-var scientific = 1.42e5;
-var aBoolean = true;
+/* Different types */
+
+/// A number
+int number = 10;
+
+/// A string
+String aSimpleString = 'Simple String';
+
+/// An hex number
+int hex = 0xDEADBEEF;
+
+/// A double with scientific notation
+double scientific = 1.42e5;
+
+/// A boolean
+bool aBoolean = true;

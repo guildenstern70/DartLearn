@@ -6,8 +6,11 @@
  * for full license information.
  */
 
-var year = 1994;
+/// A simple variable
+int year = 1994;
 
+
+/// If, then, else if, else
 int ifThenElse() {
   var century = -1;
 
@@ -20,17 +23,20 @@ int ifThenElse() {
   return century;
 }
 
+
+/// For loops
 int loops() {
   var sum = 0;
   var year = 2000;
-  var someNumbers = [34, 243, 21, 12, -32];
+  final someNumbers = [34, 243, 21, 12, -32];
 
   // Collection
-  for (var num in someNumbers) {
+  for (final num in someNumbers) {
     sum += num;
   }
 
   // Classic
+  // ignore: omit_local_variable_types
   for (int month = 1; month <= 12; month++) {
     sum += month;
   }
