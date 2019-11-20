@@ -9,6 +9,6 @@
 ///
 /// Constants
 ///
-const double radar_latitude =  40.7834390;  //primitive double
-const double radar_longitude = -73.9773670;  //primitive double
-const List<String> radar_modes = ['slow', 'medium', 'fast'];  //const object
+const double radarLatitude = 40.7834390; //primitive double
+const double radarLongitude = -73.9773670; //primitive double
+const List<String> radarModes = ['slow', 'medium', 'fast']; //const object

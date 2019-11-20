@@ -6,34 +6,40 @@
  * for full license information.
  */
 
-///
-/// Person class
-///
-class Person {
-  String _name;
-  String _surname;
-  num _age;
+/*
+  Classes
+ */
 
-  // Primary constructor
+/// A Person class
+class Person {
+
+  /// Primary constructor
   Person(this._name, this._surname, this._age);
 
-  // Secondary constructor must be 'named'
+  /// Secondary constructor must be 'named'
   Person.ageOfTen(String name, String surname) {
     this._name = name;
     this._surname = surname;
     this._age = 10;
   }
 
-  // Getters and setters
-  String get name => _name;
-  String get surname => _surname;
-  String get fullname => _name + ' ' + _surname;
+  String _name;
+  String _surname;
+  num _age;
 
+  /// Get Name
+  String get name => _name;
+
+  /// Get Surname
+  String get surname => _surname;
+
+  /// Get Full Name (Name+Surname)
+  String get fullname => '$_name $_surname';
+
+  /// Get Age
   num get age => _age;
 
-  // Override toString
+  /// Override toString
   @override
-  String toString() {
-    return this.fullname + '(Aged ' + this._age.toString() + ')';
-  }
+  String toString() => '$fullname (Aged $_age)';
 }
