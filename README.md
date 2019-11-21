@@ -3,12 +3,21 @@
 
 Samples of coding in Dart.
 
-### RUN
+### Install & Activate DART ANGULAR
+
+    > brew tap dart-lang/dart
+    > brew install dart
+  
+### Get dependencies
+
+    > pub get
+  
+### Run
 
 This program has been designed to be "readable code".
 If you still want to run it, run tests with
 
-    pub run test test/**
+    > pub run test test/**
 
     
 

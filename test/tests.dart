@@ -11,6 +11,7 @@ import 'package:DartLearn/controlflow.dart';
 import 'package:DartLearn/functions.dart';
 import 'package:DartLearn/collections.dart';
 import 'package:DartLearn/nullaware.dart';
+import 'package:DartLearn/inheritance.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -43,6 +44,10 @@ void main() {
   test('collections', () {
     expect(iterateList(), 6);
     expect(iterateGases(), 30);
+  });
+
+  test('inheritance', () {
+    expect(getTotalArea(shapeList), 771.1052794464564);
   });
 
   test('null-aware', () {
