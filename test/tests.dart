@@ -39,6 +39,7 @@ void main() {
 
     expect(fibo20, 6765);
     expect(fibo30, 832040);
+    expect(area, 408);
   });
 
   test('collections', () {
