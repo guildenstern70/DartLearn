@@ -28,10 +28,10 @@ int ifThenElse() {
 int loops() {
   var sum = 0;
   var year = 2000;
-  final someNumbers = [34, 243, 21, 12, -32];
+  var someNumbers = [34, 243, 21, 12, -32];
 
   // Collection
-  for (final num in someNumbers) {
+  for (var num in someNumbers) {
     sum += num;
   }
 

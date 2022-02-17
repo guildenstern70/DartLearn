@@ -10,14 +10,14 @@ Samples of coding in Dart.
   
 ### Get dependencies
 
-    > pub get
+    > dart pub get
   
 ### Run
 
 This program has been designed to be "readable code".
 If you still want to run it, run tests with
 
-    > pub run test test/**
+    > dart pub run test test/**
 
     
 

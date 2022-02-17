@@ -6,19 +6,22 @@
  * for full license information.
  */
 
-import 'package:DartLearn/classes.dart';
-import 'package:DartLearn/controlflow.dart';
-import 'package:DartLearn/functions.dart';
-import 'package:DartLearn/collections.dart';
-import 'package:DartLearn/nullaware.dart';
-import 'package:DartLearn/inheritance.dart';
-import 'package:test/test.dart';
+
+import 'package:dart_learn/classes.dart';
+import 'package:dart_learn/collections.dart';
+import 'package:dart_learn/controlflow.dart';
+import 'package:dart_learn/enum.dart';
+import 'package:dart_learn/functions.dart';
+import 'package:dart_learn/inheritance.dart';
+import 'package:dart_learn/nullaware.dart';
+import 'package:test/expect.dart';
+import 'package:test/scaffolding.dart';
 
 void main() {
 
   test('classes', () {
-    final alessio = Person.ageOfTen('Alessio', 'Saltarin');
-    final laura = Person('Laura', 'Saltarin', 47);
+    var alessio = Person.ageOfTen('Alessio', 'Saltarin');
+    var laura = Person('Laura', 'Saltarin', 47);
 
     expect(alessio.fullname, 'Alessio Saltarin');
     expect(alessio.age, 10);
@@ -26,16 +29,16 @@ void main() {
   });
 
   test('controlflow', () {
-    final ifSum = ifThenElse();
-    final forSum = loops();
+    var ifSum = ifThenElse();
+    var forSum = loops();
 
     expect(ifSum, 20);
     expect(forSum, 2372);
   });
 
   test('functions', () {
-    final fibo20 = fibonacci(20);
-    final fibo30 = shortFibonacci(30);
+    var fibo20 = fibonacci(20);
+    var fibo30 = shortFibonacci(30);
 
     expect(fibo20, 6765);
     expect(fibo30, 832040);
@@ -56,4 +59,11 @@ void main() {
     expect(returnThatIfThisIsNull(), 'something');
   });
 
+  test('enums', () {
+    expect(Colors.red.index, 1);
+    expect(Colors.green.index, 2);
+    expect(Colors.blue.index, 0);
+  });
+
 }
+

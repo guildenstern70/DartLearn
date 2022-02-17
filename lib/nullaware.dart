@@ -15,8 +15,8 @@ String doThatIfNotNull()
   const String a = null;
   const b = 'something';
 
-  final thisIsNull = a?.toString();
-  final thisIsSomething = b?.toString();
+  var thisIsNull = a?.toString();
+  var thisIsSomething = b?.toString();
 
   if (thisIsNull == null) {
     return thisIsSomething;

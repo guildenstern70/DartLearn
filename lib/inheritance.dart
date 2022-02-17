@@ -63,7 +63,7 @@ List<Shape> shapeList = [Circle(3.2344), Rectangle(10.0, 20.0), Square(23.2)];
 /// Polymorphic method to get areas
 double getTotalArea(List<Shape> shapes) {
   var _area = 0.0;
-  for (final shape in shapes) {
+  for (var shape in shapes) {
     _area += shape.getArea();
   }
   return _area;

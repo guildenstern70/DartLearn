@@ -29,7 +29,7 @@ void checkList() {
 /// Iterate on lists
 int iterateList() {
   var sum = 0;
-  for (final x in list) {
+  for (var x in list) {
     sum += x;
   }
   return sum;
