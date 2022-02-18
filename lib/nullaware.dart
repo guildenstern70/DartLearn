@@ -9,7 +9,6 @@
 ///
 /// Null checking
 ///
-
 String doThatIfNotNull()
 {
   const String a = null;

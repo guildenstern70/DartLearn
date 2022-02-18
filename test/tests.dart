@@ -14,6 +14,7 @@ import 'package:dart_learn/enum.dart';
 import 'package:dart_learn/functions.dart';
 import 'package:dart_learn/inheritance.dart';
 import 'package:dart_learn/nullaware.dart';
+import 'package:dart_learn/switch.dart';
 import 'package:test/expect.dart';
 import 'package:test/scaffolding.dart';
 
@@ -63,7 +64,9 @@ void main() {
     expect(Colors.red.index, 1);
     expect(Colors.green.index, 2);
     expect(Colors.blue.index, 0);
+    expect(getColorName(Colors.green), 'Green');
   });
+
 
 }
 
