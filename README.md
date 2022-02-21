@@ -1,5 +1,7 @@
 ## DartLearn
-[![Build Status](https://travis-ci.com/guildenstern70/DartLearn.svg?branch=master)](https://travis-ci.com/guildenstern70/DartLearn)
+
+![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![Dart CI](https://github.com/guildenstern70/DartLearn/actions/workflows/dart.yml/badge.svg)](https://github.com/guildenstern70/DartLearn/actions/workflows/dart.yml)
 
 Samples of coding in Dart.
 
