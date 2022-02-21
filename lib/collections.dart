@@ -7,7 +7,14 @@
  */
 
 /*
-  Basic Collections
+  Arrays
+ */
+
+/// Arrays simply do not exist in Dart.
+/// 'List' collection acts as array.
+
+/*
+  Collections
  */
 
 /// A list
@@ -24,6 +31,11 @@ Map<int, String> nobleGases = {
 void checkList() {
   assert(list.length == 3, 'List should have size of 3');
   assert(list[1] == 2, 'Second element should be 2');
+}
+
+/// Add to list
+void addToList() {
+  list.add(12);
 }
 
 /// Iterate on lists
