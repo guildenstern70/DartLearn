@@ -38,6 +38,10 @@ void addToList() {
   list.add(12);
 }
 
+/// List count
+int countList() => list.length;
+
+
 /// Iterate on lists
 int iterateList() {
   var sum = 0;
