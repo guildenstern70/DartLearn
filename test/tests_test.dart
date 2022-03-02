@@ -13,6 +13,7 @@ import 'package:dart_learn/controlflow.dart';
 import 'package:dart_learn/enum.dart';
 import 'package:dart_learn/functions.dart';
 import 'package:dart_learn/inheritance.dart';
+import 'package:dart_learn/mapreduce.dart';
 import 'package:dart_learn/nullaware.dart';
 import 'package:dart_learn/switch.dart';
 import 'package:test/expect.dart';
@@ -67,6 +68,12 @@ void main() {
     expect(getColorName(Colors.green), 'Green');
   });
 
+  test('mapreduce', () {
+    var numbers1 = mapToInline();
+    var numbers2 = mapTo();
+    expect(mapReduce(numbers1), 11);
+    expect(mapReduce(numbers2), 11);
+  });
 
 }
 
