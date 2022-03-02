@@ -7,12 +7,15 @@
  */
 
 
+import 'dart:convert';
+
 import 'package:dart_learn/classes.dart';
 import 'package:dart_learn/collections.dart';
 import 'package:dart_learn/controlflow.dart';
 import 'package:dart_learn/enum.dart';
 import 'package:dart_learn/functions.dart';
 import 'package:dart_learn/inheritance.dart';
+import 'package:dart_learn/jsonserialize.dart';
 import 'package:dart_learn/mapreduce.dart';
 import 'package:dart_learn/nullaware.dart';
 import 'package:dart_learn/switch.dart';
@@ -73,6 +76,27 @@ void main() {
     var numbers2 = mapTo();
     expect(mapReduce(numbers1), 11);
     expect(mapReduce(numbers2), 11);
+  });
+
+  test('jsonserialize', () {
+    var _jsonPerson = '''
+      {
+        "name": "Alessio",
+        "surname": "Saltarin",
+        "age": "40"
+      }
+      ''';
+    dynamic dartJson = jsonDecode(_jsonPerson);
+    var person = XPerson.fromJson(dartJson);
+    expect(person.age, 40);
+    expect(person.name, 'Alessio');
+    expect(person.surname, 'Saltarin');
+
+    var jsonPerson = person.toJson();
+    expect(jsonPerson['age'], 40);
+    expect(jsonPerson['name'], 'Alessio');
+    expect(jsonPerson['surname'], 'Saltarin');
+
   });
 
 }

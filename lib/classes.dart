@@ -30,14 +30,23 @@ class Person {
   /// Get Name
   String get name => _name;
 
+  /// Set name
+  set name(String name) => _name = name;
+
   /// Get Surname
   String get surname => _surname;
+
+  /// Set suname
+  set surname(String surname) => _surname = surname;
 
   /// Get Full Name (Name+Surname)
   String get fullname => '$_name $_surname';
 
   /// Get Age
   num get age => _age;
+
+  /// Set Age
+  set age(num age) => _age = age;
 
   /// Override toString
   @override
