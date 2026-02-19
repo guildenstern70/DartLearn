@@ -9,24 +9,21 @@
 ///
 /// Null checking
 ///
-String doThatIfNotNull()
+String? doThatIfNotNull()
 {
-  const String a = null;
+  const String? a = null;
   const b = 'something';
 
-  var thisIsNull = a?.toString();
-  var thisIsSomething = b?.toString();
-
-  if (thisIsNull == null) {
-    return thisIsSomething;
-  } // it will return "something"
+  if (a == null) {
+      return b;
+  }
 
   return null;
 }
 
 /// Return something if null
 String returnThatIfThisIsNull() {
-  String a;
+  String? a;
   const b = 'something';
 
   return a ?? b; // it will return "something"

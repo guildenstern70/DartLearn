@@ -23,9 +23,9 @@ class Person {
     this._age = 10;
   }
 
-  String _name;
-  String _surname;
-  num _age;
+  String _name = '';
+  String _surname = '';
+  num _age = 0;
 
   /// Get Name
   String get name => _name;
@@ -36,11 +36,11 @@ class Person {
   /// Get Surname
   String get surname => _surname;
 
-  /// Set suname
+  /// Set Surname
   set surname(String surname) => _surname = surname;
 
   /// Get Full Name (Name+Surname)
-  String get fullname => '$_name $_surname';
+  String get fullName => '$_name $_surname';
 
   /// Get Age
   num get age => _age;
@@ -50,5 +50,5 @@ class Person {
 
   /// Override toString
   @override
-  String toString() => '$fullname (Aged $_age)';
+  String toString() => '$fullName (Aged $_age)';
 }

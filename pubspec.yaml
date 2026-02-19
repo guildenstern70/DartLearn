@@ -3,7 +3,7 @@ description: Samples of coding in Dart.
 version: 0.0.1
 
 environment:
-  sdk: '>=2.1.0 <3.0.0'
+  sdk: '>=3.0.0'
 
 dependencies:
   json_annotation: ^4.4.0
