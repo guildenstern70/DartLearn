@@ -18,6 +18,10 @@ class Person {
     this.yearOfBirth = DateTime.now().year - age;
   }
 
+  /// Factory constructor
+  factory Person.fromJson(Map<String, dynamic> json) =>
+      Person(json['name'], json['surname'], json['yearOfBirth']);
+
   /// Person's Name
   String name = '';
 
