@@ -1,54 +1,46 @@
 /*
- * Dart Learn - Copyright (c) Alessio Saltarin.
+ * Dart Learn - Copyright (c) 2023-26 Alessio Saltarin
  * All rights reserved.
  *
  * Licensed under the MIT License. See LICENSE file in the project root
  * for full license information.
  */
 
-/*
-  Classes
- */
 
 /// A Person class
 class Person {
 
   /// Primary constructor
-  Person(this._name, this._surname, this._age);
+  Person(this.name, this.surname, this.yearOfBirth);
 
   /// Secondary constructor must be 'named'
-  Person.ageOfTen(String name, String surname) {
-    this._name = name;
-    this._surname = surname;
-    this._age = 10;
+  Person.withAge(this.name, this.surname, num age) {
+    this.yearOfBirth = DateTime.now().year - age;
   }
 
-  String _name = '';
-  String _surname = '';
-  num _age = 0;
+  /// Person's Name
+  String name = '';
+
+  /// Person's Surname
+  String surname = '';
+
+  /// Person's Year of Birth
+  num yearOfBirth = 1900;
 
   /// Get Name
-  String get name => _name;
+  String get fullName => '$name $surname';
 
-  /// Set name
-  set name(String name) => _name = name;
-
-  /// Get Surname
-  String get surname => _surname;
-
-  /// Set Surname
-  set surname(String surname) => _surname = surname;
-
-  /// Get Full Name (Name+Surname)
-  String get fullName => '$_name $_surname';
+  /// Set Name and Surname
+  set fullName(String fullName) {
+    var parts = fullName.split(' ');
+    this.name = parts[0];
+    this.surname = parts[1];
+  }
 
   /// Get Age
-  num get age => _age;
-
-  /// Set Age
-  set age(num age) => _age = age;
+  num get age => DateTime.now().year - this.yearOfBirth;
 
   /// Override toString
   @override
-  String toString() => '$fullName (Aged $_age)';
+  String toString() => '$fullName (Aged $age)';
 }

@@ -1,5 +1,5 @@
 /*
- * Dart Learn - Copyright (c) Alessio Saltarin.
+ * Dart Learn - Copyright (c) 2023-26 Alessio Saltarin
  * All rights reserved.
  *
  * Licensed under the MIT License. See LICENSE file in the project root
@@ -13,6 +13,7 @@ import 'dart:math' as math;
  */
 
 /// A basic, abstract shape class
+// ignore: non_constant_identifier_names
 abstract class Shape {
   /// Primary constructor
   Shape();

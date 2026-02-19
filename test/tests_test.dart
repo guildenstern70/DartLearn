@@ -1,5 +1,5 @@
 /*
- * Dart Learn - Copyright (c) Alessio Saltarin.
+ * Dart Learn - Copyright (c) 2023-26 Alessio Saltarin
  * All rights reserved.
  *
  * Licensed under the MIT License. See LICENSE file in the project root
@@ -25,11 +25,11 @@ import 'package:test/scaffolding.dart';
 void main() {
 
   test('classes', () {
-    var alessio = Person.ageOfTen('Alessio', 'Saltarin');
-    var laura = Person('Laura', 'Saltarin', 47);
+    var alessio = Person.withAge('Alessio', 'Saltarin', 56);
+    var laura = Person.withAge('Laura', 'Saltarin', 47);
 
     expect(alessio.fullName, 'Alessio Saltarin');
-    expect(alessio.age, 10);
+    expect(alessio.age, 56);
     expect(laura.age, 47);
   });
 
@@ -83,17 +83,16 @@ void main() {
       {
         "name": "Alessio",
         "surname": "Saltarin",
-        "age": "40"
+        "yearOfBirth": "1970"
       }
       ''';
     dynamic dartJson = jsonDecode(_jsonPerson);
-    var person = XPerson.fromJson(dartJson);
-    expect(person.age, 40);
+    var person = JsonPerson.fromJson(dartJson);
     expect(person.name, 'Alessio');
     expect(person.surname, 'Saltarin');
 
     var jsonPerson = person.toJson();
-    expect(jsonPerson['age'], 40);
+    expect(jsonPerson['yearOfBirth'], '1970');
     expect(jsonPerson['name'], 'Alessio');
     expect(jsonPerson['surname'], 'Saltarin');
 

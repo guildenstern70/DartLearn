@@ -1,5 +1,5 @@
 /*
- * Dart Learn - Copyright (c) Alessio Saltarin.
+ * Dart Learn - Copyright (c) 2023-26 Alessio Saltarin
  * All rights reserved.
  *
  * Licensed under the MIT License. See LICENSE file in the project root
@@ -8,19 +8,24 @@
 
 import 'classes.dart';
 
-class XPerson extends Person {
+/// A JSON-serializable representation of a Person.
+///
+/// This class extends [Person] and provides functionality to convert
+/// Person objects to and from JSON format.
+class JsonPerson extends Person {
 
   /// Constructor
-  XPerson(String name, String surname, num age) : super(name, surname, age);
+  JsonPerson(String name, String surname, num yearOfBirth) : 
+        super(name, surname, yearOfBirth);
 
   /// Build from JSON
-  XPerson.fromJson(dynamic json) : super('', '', -1) {
-    dynamic xname = json['name'];
-    dynamic xsurname = json['surname'];
-    dynamic xage = json['age'];
-    this.name = xname as String;
-    this.surname = xsurname as String;
-    this.age = int.parse(xage as String);
+  JsonPerson.fromJson(dynamic json) : super('', '', -1) {
+    dynamic jsonName = json['name'];
+    dynamic jsonSurname = json['surname'];
+    dynamic jsonYearOfBirth = json['yearOfBirth'];
+    this.name = jsonName as String;
+    this.surname = jsonSurname as String;
+    this.yearOfBirth = int.parse(jsonYearOfBirth as String);
   }
 
   /// XPerson to JSON
@@ -28,14 +33,14 @@ class XPerson extends Person {
     var data = <String, dynamic>{};
     data['name'] = this.name;
     data['surname'] = this.surname;
-    data['age'] = this.age;
+    data['yearOfBirth'] = this.yearOfBirth.toString();
     return data;
   }
 
 }
 
 /// Decode JSON to Person
-Person decodeJsonToPerson(String jsonPerson) => XPerson.fromJson(jsonPerson);
+Person decodeJsonToPerson(String jsonPerson) => JsonPerson.fromJson(jsonPerson);
 
-/// Enconde Person to JSON
-Map<String, dynamic> encodeToJson(XPerson p) => p.toJson();
+/// Encode Person to JSON
+Map<String, dynamic> encodeToJson(JsonPerson p) => p.toJson();

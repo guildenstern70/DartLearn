@@ -62,7 +62,6 @@ linter:
     - flutter_style_todos
     - hash_and_equals
     - implementation_imports
-    - invariant_booleans
     - iterable_contains_unrelated_type
     - join_return_with_assignment
     - library_names
@@ -75,7 +74,6 @@ linter:
     - non_constant_identifier_names
     - null_closures
     - omit_local_variable_types
-    - one_member_abstracts
     - only_throw_errors
     - overridden_fields
     - package_api_docs
@@ -93,7 +91,6 @@ linter:
     - prefer_const_literals_to_create_immutables
     - prefer_constructors_over_static_methods
     - prefer_contains
-    - prefer_equal_for_default_values
     - prefer_expression_function_bodies
     - prefer_final_fields
     - prefer_for_elements_to_map_fromIterable
